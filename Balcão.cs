@@ -24,15 +24,9 @@ namespace Cantina
 
         private void Balcão_Load(object sender, EventArgs e)
         {
-            foreach (Pedido pedido in PedidosGerais.Pedidos)
-            {
-               foreach(Produto produto in pedido.Produtos)
-                {
-                    if (!produto.IsChapa)
-                        listBox1.Items.Add(pedido);
-                }
-                    
-            }
+            
+            
+            
         }
 
         private void btnIrVendas_Click(object sender, EventArgs e)

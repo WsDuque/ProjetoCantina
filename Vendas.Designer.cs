@@ -48,10 +48,12 @@
             rbtnPix = new RadioButton();
             checkViagem = new CheckBox();
             btnIrBalcão = new Button();
-            pictureBox6 = new PictureBox();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
+            pictureBox6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // btnAdicionar
@@ -90,12 +92,12 @@
             // 
             listCardápio.BackColor = Color.FromArgb(202, 196, 183);
             listCardápio.BorderStyle = BorderStyle.None;
-            listCardápio.Font = new Font("Segoe UI", 11F);
+            listCardápio.Font = new Font("Segoe UI", 10F);
             listCardápio.FormattingEnabled = true;
-            listCardápio.ItemHeight = 20;
-            listCardápio.Location = new Point(43, 152);
+            listCardápio.ItemHeight = 17;
+            listCardápio.Location = new Point(21, 161);
             listCardápio.Name = "listCardápio";
-            listCardápio.Size = new Size(229, 200);
+            listCardápio.Size = new Size(250, 187);
             listCardápio.TabIndex = 2;
             listCardápio.SelectedIndexChanged += listCardápio_SelectedIndexChanged;
             listCardápio.KeyDown += listCardápio_KeyDown;
@@ -154,7 +156,7 @@
             lblQuantidade.BackColor = Color.FromArgb(230, 255, 0);
             lblQuantidade.Font = new Font("Agrandir", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblQuantidade.ForeColor = Color.Black;
-            lblQuantidade.Location = new Point(292, 130);
+            lblQuantidade.Location = new Point(289, 128);
             lblQuantidade.Name = "lblQuantidade";
             lblQuantidade.Size = new Size(101, 21);
             lblQuantidade.TabIndex = 8;
@@ -213,13 +215,14 @@
             lblTroco.TabIndex = 16;
             lblTroco.Text = "Troco:";
             lblTroco.Visible = false;
+            lblTroco.Click += lblTroco_Click;
             // 
             // rbtnDinheiro
             // 
             rbtnDinheiro.AutoSize = true;
             rbtnDinheiro.BackColor = Color.FromArgb(202, 196, 183);
             rbtnDinheiro.Font = new Font("Agrandir", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rbtnDinheiro.Location = new Point(520, 255);
+            rbtnDinheiro.Location = new Point(511, 255);
             rbtnDinheiro.Name = "rbtnDinheiro";
             rbtnDinheiro.Size = new Size(86, 24);
             rbtnDinheiro.TabIndex = 17;
@@ -233,7 +236,7 @@
             rbtnDébito.AutoSize = true;
             rbtnDébito.BackColor = Color.FromArgb(202, 196, 183);
             rbtnDébito.Font = new Font("Agrandir", 11F, FontStyle.Bold);
-            rbtnDébito.Location = new Point(520, 280);
+            rbtnDébito.Location = new Point(511, 280);
             rbtnDébito.Name = "rbtnDébito";
             rbtnDébito.Size = new Size(75, 24);
             rbtnDébito.TabIndex = 20;
@@ -247,7 +250,7 @@
             rbtnCrédito.AutoSize = true;
             rbtnCrédito.BackColor = Color.FromArgb(202, 196, 183);
             rbtnCrédito.Font = new Font("Agrandir", 11F, FontStyle.Bold);
-            rbtnCrédito.Location = new Point(520, 305);
+            rbtnCrédito.Location = new Point(511, 305);
             rbtnCrédito.Name = "rbtnCrédito";
             rbtnCrédito.Size = new Size(82, 24);
             rbtnCrédito.TabIndex = 21;
@@ -261,7 +264,7 @@
             rbtnPix.AutoSize = true;
             rbtnPix.BackColor = Color.FromArgb(202, 196, 183);
             rbtnPix.Font = new Font("Agrandir", 11F, FontStyle.Bold);
-            rbtnPix.Location = new Point(520, 330);
+            rbtnPix.Location = new Point(511, 330);
             rbtnPix.Name = "rbtnPix";
             rbtnPix.Size = new Size(49, 24);
             rbtnPix.TabIndex = 22;
@@ -297,33 +300,53 @@
             btnIrBalcão.UseVisualStyleBackColor = false;
             btnIrBalcão.Click += btnIrBalcão_Click;
             // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(-2, -29);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(804, 483);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 30;
-            pictureBox6.TabStop = false;
-            // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackColor = Color.FromArgb(241, 241, 241);
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Location = new Point(661, -18);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(152, 106);
+            pictureBox1.Size = new Size(142, 108);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 31;
             pictureBox1.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(43, 12);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(84, 23);
+            dateTimePicker1.TabIndex = 32;
+            dateTimePicker1.Value = new DateTime(2025, 5, 28, 11, 4, 56, 0);
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Time;
+            dateTimePicker2.Location = new Point(41, 41);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(86, 23);
+            dateTimePicker2.TabIndex = 33;
+            dateTimePicker2.Value = new DateTime(2025, 5, 28, 11, 4, 56, 0);
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(-3, -110);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(806, 225);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 34;
+            pictureBox6.TabStop = false;
             // 
             // Vendas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(124, 122, 106);
+            BackColor = Color.FromArgb(241, 241, 241);
             ClientSize = new Size(800, 450);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(dateTimePicker1);
             Controls.Add(pictureBox1);
             Controls.Add(btnIrBalcão);
             Controls.Add(checkViagem);
@@ -346,10 +369,10 @@
             Controls.Add(btnAdicionar);
             Controls.Add(pictureBox6);
             Name = "Vendas";
-            Text = "Form1";
+            Text = "-";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -375,7 +398,9 @@
         private RadioButton rbtnPix;
         private CheckBox checkViagem;
         private Button btnIrBalcão;
-        private PictureBox pictureBox6;
         private PictureBox pictureBox1;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
+        private PictureBox pictureBox6;
     }
 }

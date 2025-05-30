@@ -95,8 +95,6 @@ namespace Cantina
         {
             if (listPedido.SelectedItem != null)
             {
-
-                // Colocar uma pergunta: "tem certeza que deseja remover?"
                 Produto produto = new Produto();
                 produto = (Produto)listPedido.SelectedItem;
                 if (produto.Quantidade == 1)
@@ -130,11 +128,6 @@ namespace Cantina
                                 txtQuantidade.Clear();
 
                             }
-
-
-                        //listPedido.Items.Remove(listPedido.SelectedItem);
-                        //listPedido.Items.Add(produto);
-
                     }
 
                 }
@@ -170,11 +163,6 @@ namespace Cantina
         private void listPedido_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtQuantidade.Focus();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void rbtnDinheiro_CheckedChanged(object sender, EventArgs e)
@@ -275,7 +263,8 @@ namespace Cantina
                     eViagem = "Não";
                 }
                 string produtos = string.Join("\n", produtosPedido.Select(x => x.ToString()));
-                MessageBox.Show($"{pedido.Cliente}\n{produtos}\n\nMétodo de Pgmnt: {método}\nÉ viagem? {eViagem}");
+                pedido.DataTime = dateTimePicker1.Text + dateTimePicker2.Text;
+                MessageBox.Show($"{pedido.Cliente}\n{produtos}\n\nMétodo de Pgmnt: {método}\nÉ viagem? {eViagem}\n{pedido.DataTime}");
                 PedidosGerais.Adicionar(pedido);
                 listPedido.Items.Clear();
                 txtCliente.Clear();
@@ -321,6 +310,11 @@ namespace Cantina
             Balcão balcão = new Balcão();
             Hide();
             balcão.Show();
+        }
+
+        private void lblTroco_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

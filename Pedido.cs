@@ -13,7 +13,10 @@ namespace Cantina
         private List<Produto> produtos = new();
         private bool isViagem;
         private string status;
-        
+        private string dataHora;
+        public string pedidoBalcão;
+       
+        //private int código;
         public string Cliente
          {
             get { return cliente; }
@@ -28,11 +31,20 @@ namespace Cantina
         {
             produtos.Add(produto); 
         }
-        
+        public string PedidoBalcão
+        {
+            get { return pedidoBalcão; }
+        }
         public bool IsViagem
         {
             get { return isViagem; }
             set { this.isViagem = value; }
         }
+        public string DataTime
+        {
+            get { return dataHora; }
+            set { dataHora = value; }
+        }
+
     }
 }

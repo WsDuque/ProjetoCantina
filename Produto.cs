@@ -62,7 +62,10 @@ namespace Cantina
         {
             return $"{nome} - R${valor:n2} x {quantidade}";
         }
-
+        public string balcão
+        {
+            get { return $"{nome} x{quantidade}"; }
+        }
         public bool IsChapa
         {
             get { return isChapa;  }
