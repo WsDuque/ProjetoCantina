@@ -35,7 +35,6 @@
             listPedido = new ListBox();
             btnFinalizar = new Button();
             lblTotal = new Label();
-            txtQuantidade = new TextBox();
             lblQuantidade = new Label();
             txtCliente = new TextBox();
             lblCliente = new Label();
@@ -52,8 +51,11 @@
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             pictureBox6 = new PictureBox();
+            numericUpDown1 = new NumericUpDown();
+            txtQuantidade = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // btnAdicionar
@@ -61,7 +63,6 @@
             btnAdicionar.BackColor = Color.FromArgb(230, 255, 0);
             btnAdicionar.BackgroundImageLayout = ImageLayout.Center;
             btnAdicionar.Cursor = Cursors.Hand;
-            btnAdicionar.FlatAppearance.BorderSize = 0;
             btnAdicionar.FlatStyle = FlatStyle.Flat;
             btnAdicionar.Font = new Font("Agrandir", 12F, FontStyle.Bold);
             btnAdicionar.ForeColor = Color.Black;
@@ -77,7 +78,6 @@
             // 
             btnRemover.BackColor = Color.FromArgb(230, 255, 0);
             btnRemover.Cursor = Cursors.Hand;
-            btnRemover.FlatAppearance.BorderSize = 0;
             btnRemover.FlatStyle = FlatStyle.Flat;
             btnRemover.Font = new Font("Agrandir", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRemover.Location = new Point(511, 144);
@@ -91,13 +91,13 @@
             // listCardápio
             // 
             listCardápio.BackColor = Color.FromArgb(202, 196, 183);
-            listCardápio.BorderStyle = BorderStyle.None;
+            listCardápio.BorderStyle = BorderStyle.FixedSingle;
             listCardápio.Font = new Font("Segoe UI", 10F);
             listCardápio.FormattingEnabled = true;
             listCardápio.ItemHeight = 17;
             listCardápio.Location = new Point(21, 161);
             listCardápio.Name = "listCardápio";
-            listCardápio.Size = new Size(250, 187);
+            listCardápio.Size = new Size(250, 172);
             listCardápio.TabIndex = 2;
             listCardápio.SelectedIndexChanged += listCardápio_SelectedIndexChanged;
             listCardápio.KeyDown += listCardápio_KeyDown;
@@ -105,12 +105,12 @@
             // listPedido
             // 
             listPedido.BackColor = Color.FromArgb(202, 196, 183);
-            listPedido.BorderStyle = BorderStyle.None;
+            listPedido.BorderStyle = BorderStyle.FixedSingle;
             listPedido.FormattingEnabled = true;
             listPedido.ItemHeight = 15;
             listPedido.Location = new Point(292, 198);
             listPedido.Name = "listPedido";
-            listPedido.Size = new Size(176, 150);
+            listPedido.Size = new Size(176, 137);
             listPedido.TabIndex = 3;
             listPedido.SelectedIndexChanged += listPedido_SelectedIndexChanged;
             // 
@@ -141,24 +141,16 @@
             lblTotal.TabIndex = 6;
             lblTotal.Text = "Total";
             // 
-            // txtQuantidade
-            // 
-            txtQuantidade.BackColor = Color.FromArgb(202, 196, 183);
-            txtQuantidade.Location = new Point(292, 152);
-            txtQuantidade.Name = "txtQuantidade";
-            txtQuantidade.Size = new Size(98, 23);
-            txtQuantidade.TabIndex = 7;
-            txtQuantidade.KeyDown += txtQuantidade_KeyDown;
-            // 
             // lblQuantidade
             // 
             lblQuantidade.AutoSize = true;
             lblQuantidade.BackColor = Color.FromArgb(230, 255, 0);
+            lblQuantidade.BorderStyle = BorderStyle.FixedSingle;
             lblQuantidade.Font = new Font("Agrandir", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblQuantidade.ForeColor = Color.Black;
             lblQuantidade.Location = new Point(289, 128);
             lblQuantidade.Name = "lblQuantidade";
-            lblQuantidade.Size = new Size(101, 21);
+            lblQuantidade.Size = new Size(103, 23);
             lblQuantidade.TabIndex = 8;
             lblQuantidade.Text = "Quantidade:";
             // 
@@ -339,12 +331,29 @@
             pictureBox6.TabIndex = 34;
             pictureBox6.TabStop = false;
             // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(310, 92);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(61, 23);
+            numericUpDown1.TabIndex = 36;
+            // 
+            // txtQuantidade
+            // 
+            txtQuantidade.BackColor = Color.FromArgb(202, 196, 183);
+            txtQuantidade.Location = new Point(292, 152);
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new Size(98, 23);
+            txtQuantidade.TabIndex = 7;
+            txtQuantidade.KeyDown += txtQuantidade_KeyDown;
+            // 
             // Vendas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(241, 241, 241);
             ClientSize = new Size(800, 450);
+            Controls.Add(numericUpDown1);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
             Controls.Add(pictureBox1);
@@ -373,6 +382,7 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -385,7 +395,6 @@
         private ListBox listPedido;
         private Button btnFinalizar;
         private Label lblTotal;
-        private TextBox txtQuantidade;
         private Label lblQuantidade;
         private TextBox txtCliente;
         private Label lblCliente;
@@ -402,5 +411,7 @@
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
         private PictureBox pictureBox6;
+        private NumericUpDown numericUpDown1;
+        private TextBox txtQuantidade;
     }
 }

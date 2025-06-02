@@ -145,12 +145,12 @@ namespace Cantina
             foreach (Produto produto in listPedido.Items)
             {
                 total += produto.Valor * produto.Quantidade;
-                lblTotal.Text = $"Total: R${total}";
+                lblTotal.Text = $"Total: R${total:n2}";
             }
             if (listPedido.Items.Count == 0)
             {
                 total = 0;
-                lblTotal.Text = $"Total: R${total}";
+                lblTotal.Text = $"Total: R${total:n2}";
             }
             return total;
         }
@@ -264,7 +264,11 @@ namespace Cantina
                 }
                 string produtos = string.Join("\n", produtosPedido.Select(x => x.ToString()));
                 pedido.DataTime = dateTimePicker1.Text + dateTimePicker2.Text;
-                MessageBox.Show($"{pedido.Cliente}\n{produtos}\n\nMétodo de Pgmnt: {método}\nÉ viagem? {eViagem}\n{pedido.DataTime}");
+                MessageBox.Show($"{pedido.Cliente}\n{produtos}\n\nMétodo de Pgmnt: {método}\nÉ viagem? {eViagem}\n\n{pedido.DataTime}");
+                if (pedido.Produtos.Where(x => x.IsChapa).Any())
+                    pedido.status = Pedido.Status.Preparando;
+                else
+                    pedido.status = Pedido.Status.Pronto;
                 PedidosGerais.Adicionar(pedido);
                 listPedido.Items.Clear();
                 txtCliente.Clear();

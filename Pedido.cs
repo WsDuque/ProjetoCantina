@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,25 @@ namespace Cantina
         private int código;
         private List<Produto> produtos = new();
         private bool isViagem;
-        private string status;
+        public Status status;
+        private bool temChapa = false;
         private string dataHora;
-        public string pedidoBalcão;
-       
-        //private int código;
+        public enum Status
+        {
+            Preparando,
+            Pronto,
+            Entregue
+        }
+
+        public override string ToString()
+        {
+            return $"{código} - {cliente}";
+        }
+        public int códigoPedido
+        {
+            get { return código; }
+            set {código = value; }
+        }
         public string Cliente
          {
             get { return cliente; }
@@ -29,12 +44,13 @@ namespace Cantina
 
         public void addProdutos(Produto produto) 
         {
+            if (produto.IsChapa)
+            {
+                this.temChapa = true;
+            }
             produtos.Add(produto); 
         }
-        public string PedidoBalcão
-        {
-            get { return pedidoBalcão; }
-        }
+
         public bool IsViagem
         {
             get { return isViagem; }
@@ -45,6 +61,10 @@ namespace Cantina
             get { return dataHora; }
             set { dataHora = value; }
         }
-
+        public bool TemChapa
+        {
+            get { return temChapa; }
+            set { temChapa = value; }
+        }
     }
 }

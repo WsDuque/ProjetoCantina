@@ -32,7 +32,12 @@
             btnIrVendas = new Button();
             pictureBox6 = new PictureBox();
             pictureBox1 = new PictureBox();
-            listView1 = new ListView();
+            btnHistórico = new Button();
+            listBalcão = new ListBox();
+            listDetalhesBalcão = new ListBox();
+            listHistórico = new ListBox();
+            listDetalhesHistórico = new ListBox();
+            btnFecharPedido = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -68,13 +73,88 @@
             pictureBox1.TabIndex = 32;
             pictureBox1.TabStop = false;
             // 
-            // listView1
+            // btnHistórico
             // 
-            listView1.Location = new Point(67, 161);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(327, 216);
-            listView1.TabIndex = 33;
-            listView1.UseCompatibleStateImageBehavior = false;
+            btnHistórico.BackColor = Color.FromArgb(230, 255, 0);
+            btnHistórico.BackgroundImageLayout = ImageLayout.Center;
+            btnHistórico.Cursor = Cursors.Hand;
+            btnHistórico.FlatStyle = FlatStyle.Flat;
+            btnHistórico.Font = new Font("Agrandir", 12F, FontStyle.Bold);
+            btnHistórico.ForeColor = Color.Black;
+            btnHistórico.Location = new Point(699, 121);
+            btnHistórico.Name = "btnHistórico";
+            btnHistórico.Size = new Size(89, 32);
+            btnHistórico.TabIndex = 36;
+            btnHistórico.Text = "Histórico";
+            btnHistórico.UseVisualStyleBackColor = false;
+            btnHistórico.Click += btnHistórico_Click;
+            // 
+            // listBalcão
+            // 
+            listBalcão.BackColor = Color.FromArgb(202, 196, 183);
+            listBalcão.BorderStyle = BorderStyle.FixedSingle;
+            listBalcão.Font = new Font("Segoe UI", 10F);
+            listBalcão.FormattingEnabled = true;
+            listBalcão.ItemHeight = 17;
+            listBalcão.Location = new Point(51, 172);
+            listBalcão.Name = "listBalcão";
+            listBalcão.Size = new Size(175, 172);
+            listBalcão.TabIndex = 39;
+            listBalcão.SelectedIndexChanged += listBalcão_SelectedIndexChanged;
+            // 
+            // listDetalhesBalcão
+            // 
+            listDetalhesBalcão.BackColor = Color.FromArgb(202, 196, 183);
+            listDetalhesBalcão.BorderStyle = BorderStyle.FixedSingle;
+            listDetalhesBalcão.Font = new Font("Segoe UI", 10F);
+            listDetalhesBalcão.FormattingEnabled = true;
+            listDetalhesBalcão.ItemHeight = 17;
+            listDetalhesBalcão.Location = new Point(309, 172);
+            listDetalhesBalcão.Name = "listDetalhesBalcão";
+            listDetalhesBalcão.Size = new Size(250, 172);
+            listDetalhesBalcão.TabIndex = 40;
+            // 
+            // listHistórico
+            // 
+            listHistórico.BackColor = Color.FromArgb(202, 196, 183);
+            listHistórico.BorderStyle = BorderStyle.FixedSingle;
+            listHistórico.Font = new Font("Segoe UI", 10F);
+            listHistórico.FormattingEnabled = true;
+            listHistórico.ItemHeight = 17;
+            listHistórico.Location = new Point(178, 163);
+            listHistórico.Name = "listHistórico";
+            listHistórico.Size = new Size(211, 206);
+            listHistórico.TabIndex = 41;
+            listHistórico.Visible = false;
+            // 
+            // listDetalhesHistórico
+            // 
+            listDetalhesHistórico.BackColor = Color.FromArgb(202, 196, 183);
+            listDetalhesHistórico.BorderStyle = BorderStyle.FixedSingle;
+            listDetalhesHistórico.Font = new Font("Segoe UI", 10F);
+            listDetalhesHistórico.FormattingEnabled = true;
+            listDetalhesHistórico.ItemHeight = 17;
+            listDetalhesHistórico.Location = new Point(446, 163);
+            listDetalhesHistórico.Name = "listDetalhesHistórico";
+            listDetalhesHistórico.Size = new Size(211, 206);
+            listDetalhesHistórico.TabIndex = 42;
+            listDetalhesHistórico.Visible = false;
+            // 
+            // btnFecharPedido
+            // 
+            btnFecharPedido.BackColor = Color.FromArgb(230, 255, 0);
+            btnFecharPedido.BackgroundImageLayout = ImageLayout.Center;
+            btnFecharPedido.Cursor = Cursors.Hand;
+            btnFecharPedido.FlatStyle = FlatStyle.Flat;
+            btnFecharPedido.Font = new Font("Agrandir", 12F, FontStyle.Bold);
+            btnFecharPedido.ForeColor = Color.Black;
+            btnFecharPedido.Location = new Point(309, 395);
+            btnFecharPedido.Name = "btnFecharPedido";
+            btnFecharPedido.Size = new Size(89, 32);
+            btnFecharPedido.TabIndex = 43;
+            btnFecharPedido.Text = "Entregar";
+            btnFecharPedido.UseVisualStyleBackColor = false;
+            btnFecharPedido.Click += btnFecharPedido_Click;
             // 
             // Balcão
             // 
@@ -82,10 +162,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(241, 241, 241);
             ClientSize = new Size(800, 450);
-            Controls.Add(listView1);
+            Controls.Add(btnFecharPedido);
+            Controls.Add(listDetalhesBalcão);
+            Controls.Add(listBalcão);
+            Controls.Add(btnHistórico);
             Controls.Add(pictureBox1);
             Controls.Add(btnIrVendas);
             Controls.Add(pictureBox6);
+            Controls.Add(listHistórico);
+            Controls.Add(listDetalhesHistórico);
             Name = "Balcão";
             Text = "Balcão";
             Load += Balcão_Load;
@@ -98,7 +183,11 @@
         private Button btnIrVendas;
         private PictureBox pictureBox6;
         private PictureBox pictureBox1;
+        private Button btnHistórico;
         private ListBox listBalcão;
-        private ListView listView1;
+        private ListBox listDetalhesBalcão;
+        private ListBox listHistórico;
+        private ListBox listDetalhesHistórico;
+        private Button btnFecharPedido;
     }
 }
