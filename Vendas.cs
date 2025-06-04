@@ -24,7 +24,7 @@ namespace Cantina
             lista.Add(new Produto("Hambúrguer com Queijo", 9, true));
             lista.Add(new Produto("X-Tudo", 12, true));
             lista.Add(new Produto("Água Mineral (500mL)", 2.50));
-
+            txtQuantidade.Text = "1";
             foreach (Produto produto in lista)
                 listCardápio.Items.Add(produto);
 
@@ -45,7 +45,7 @@ namespace Cantina
                         produto.Quantidade = qtd;
                         listPedido.Items.Add(produto);
                         listCardápio.ClearSelected();
-                        txtQuantidade.Clear();
+                        txtQuantidade.Text = "1";
                     }
                     else
                     {
@@ -126,7 +126,6 @@ namespace Cantina
                             {
                                 listPedido.Items.Remove(listPedido.SelectedItem);
                                 txtQuantidade.Clear();
-
                             }
                     }
 
@@ -135,7 +134,6 @@ namespace Cantina
             }
             else
                 MessageBox.Show("Selecione um item!");
-
             totalMudando();
         }
 
@@ -272,6 +270,7 @@ namespace Cantina
                 PedidosGerais.Adicionar(pedido);
                 listPedido.Items.Clear();
                 txtCliente.Clear();
+                listPedido.ClearSelected();
                 rbtnCrédito.Checked = false;
                 rbtnDébito.Checked = false;
                 rbtnPix.Checked = false;
@@ -314,11 +313,6 @@ namespace Cantina
             Balcão balcão = new Balcão();
             Hide();
             balcão.Show();
-        }
-
-        private void lblTroco_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnIrCozinha_Click(object sender, EventArgs e)

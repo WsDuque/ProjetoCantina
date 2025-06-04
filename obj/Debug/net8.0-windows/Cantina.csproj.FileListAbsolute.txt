@@ -70,3 +70,4 @@ C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\C
 C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\Cantina.genruntimeconfig.cache
 C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\ref\Cantina.dll
 C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\Cantina.Cozinha.resources
+C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\Cantina.Chamada.resources

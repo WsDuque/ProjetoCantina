@@ -35,5 +35,37 @@ namespace Cantina
             vendas.ShowDialog();
 
         }
+
+        private void listCozinha_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listCozinha.SelectedItem != null)
+            {
+                listDetalhesPedido.Items.Clear();
+                Pedido pedido = listCozinha.SelectedItem as Pedido;
+                foreach (Produto produto in pedido.Produtos)
+                {
+                    listDetalhesPedido.Items.Add(produto);
+                }
+            }
+
+        }
+
+        private void btnFecharPedido_Click(object sender, EventArgs e)
+        {
+            if (listCozinha.SelectedItem != null)
+            {
+                
+                foreach(Pedido pedido in PedidosGerais.Pedidos)
+                {
+                    if (pedido == listCozinha.SelectedItem)
+                    { 
+                        pedido.status = Pedido.Status.Pronto;
+                    }
+                }
+    
+                listDetalhesPedido.Items.Clear();
+                listCozinha.Items.Remove(listCozinha.SelectedItem); 
+            }
+        }
     }
 }

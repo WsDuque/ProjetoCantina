@@ -33,12 +33,13 @@
             pictureBox6 = new PictureBox();
             pictureBox1 = new PictureBox();
             btnHistórico = new Button();
-            listBalcão = new ListBox();
-            listDetalhesBalcão = new ListBox();
-            listHistórico = new ListBox();
-            listDetalhesHistórico = new ListBox();
             btnFecharPedido = new Button();
             lblBalcão = new Label();
+            listDetalhesHistórico = new ListBox();
+            listHistórico = new ListBox();
+            listBalcão = new ListBox();
+            listDetalhesBalcão = new ListBox();
+            btnIrBalcão = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -90,58 +91,6 @@
             btnHistórico.UseVisualStyleBackColor = false;
             btnHistórico.Click += btnHistórico_Click;
             // 
-            // listBalcão
-            // 
-            listBalcão.BackColor = Color.FromArgb(202, 196, 183);
-            listBalcão.BorderStyle = BorderStyle.FixedSingle;
-            listBalcão.Font = new Font("Inter", 9.75F);
-            listBalcão.FormattingEnabled = true;
-            listBalcão.ItemHeight = 18;
-            listBalcão.Location = new Point(51, 172);
-            listBalcão.Name = "listBalcão";
-            listBalcão.Size = new Size(175, 164);
-            listBalcão.TabIndex = 39;
-            listBalcão.SelectedIndexChanged += listBalcão_SelectedIndexChanged;
-            // 
-            // listDetalhesBalcão
-            // 
-            listDetalhesBalcão.BackColor = Color.FromArgb(202, 196, 183);
-            listDetalhesBalcão.BorderStyle = BorderStyle.FixedSingle;
-            listDetalhesBalcão.Font = new Font("Inter", 9.75F);
-            listDetalhesBalcão.FormattingEnabled = true;
-            listDetalhesBalcão.ItemHeight = 18;
-            listDetalhesBalcão.Location = new Point(309, 172);
-            listDetalhesBalcão.Name = "listDetalhesBalcão";
-            listDetalhesBalcão.Size = new Size(250, 164);
-            listDetalhesBalcão.TabIndex = 40;
-            // 
-            // listHistórico
-            // 
-            listHistórico.BackColor = Color.FromArgb(202, 196, 183);
-            listHistórico.BorderStyle = BorderStyle.FixedSingle;
-            listHistórico.Font = new Font("Inter", 9.75F);
-            listHistórico.FormattingEnabled = true;
-            listHistórico.ItemHeight = 18;
-            listHistórico.Location = new Point(178, 163);
-            listHistórico.Name = "listHistórico";
-            listHistórico.Size = new Size(211, 200);
-            listHistórico.TabIndex = 41;
-            listHistórico.Visible = false;
-            listHistórico.SelectedIndexChanged += listHistórico_SelectedIndexChanged;
-            // 
-            // listDetalhesHistórico
-            // 
-            listDetalhesHistórico.BackColor = Color.FromArgb(202, 196, 183);
-            listDetalhesHistórico.BorderStyle = BorderStyle.FixedSingle;
-            listDetalhesHistórico.Font = new Font("Inter", 9.75F);
-            listDetalhesHistórico.FormattingEnabled = true;
-            listDetalhesHistórico.ItemHeight = 18;
-            listDetalhesHistórico.Location = new Point(446, 163);
-            listDetalhesHistórico.Name = "listDetalhesHistórico";
-            listDetalhesHistórico.Size = new Size(211, 200);
-            listDetalhesHistórico.TabIndex = 42;
-            listDetalhesHistórico.Visible = false;
-            // 
             // btnFecharPedido
             // 
             btnFecharPedido.BackColor = Color.FromArgb(230, 255, 0);
@@ -168,12 +117,78 @@
             lblBalcão.TabIndex = 44;
             lblBalcão.Text = "Balcão";
             // 
+            // listDetalhesHistórico
+            // 
+            listDetalhesHistórico.BackColor = Color.FromArgb(202, 196, 183);
+            listDetalhesHistórico.BorderStyle = BorderStyle.FixedSingle;
+            listDetalhesHistórico.Font = new Font("Inter", 9.75F);
+            listDetalhesHistórico.FormattingEnabled = true;
+            listDetalhesHistórico.ItemHeight = 18;
+            listDetalhesHistórico.Location = new Point(446, 163);
+            listDetalhesHistórico.Name = "listDetalhesHistórico";
+            listDetalhesHistórico.Size = new Size(211, 200);
+            listDetalhesHistórico.TabIndex = 42;
+            listDetalhesHistórico.Visible = false;
+            // 
+            // listHistórico
+            // 
+            listHistórico.BackColor = Color.FromArgb(202, 196, 183);
+            listHistórico.BorderStyle = BorderStyle.FixedSingle;
+            listHistórico.Font = new Font("Inter", 9.75F);
+            listHistórico.FormattingEnabled = true;
+            listHistórico.ItemHeight = 18;
+            listHistórico.Location = new Point(178, 163);
+            listHistórico.Name = "listHistórico";
+            listHistórico.Size = new Size(211, 200);
+            listHistórico.TabIndex = 41;
+            listHistórico.Visible = false;
+            listHistórico.SelectedIndexChanged += listHistórico_SelectedIndexChanged;
+            // 
+            // listBalcão
+            // 
+            listBalcão.BackColor = Color.FromArgb(202, 196, 183);
+            listBalcão.BorderStyle = BorderStyle.FixedSingle;
+            listBalcão.Font = new Font("Inter", 9.75F);
+            listBalcão.FormattingEnabled = true;
+            listBalcão.ItemHeight = 18;
+            listBalcão.Location = new Point(51, 172);
+            listBalcão.Name = "listBalcão";
+            listBalcão.Size = new Size(175, 164);
+            listBalcão.TabIndex = 39;
+            listBalcão.SelectedIndexChanged += listBalcão_SelectedIndexChanged;
+            // 
+            // listDetalhesBalcão
+            // 
+            listDetalhesBalcão.BackColor = Color.FromArgb(202, 196, 183);
+            listDetalhesBalcão.BorderStyle = BorderStyle.FixedSingle;
+            listDetalhesBalcão.Font = new Font("Inter", 9.75F);
+            listDetalhesBalcão.FormattingEnabled = true;
+            listDetalhesBalcão.ItemHeight = 18;
+            listDetalhesBalcão.Location = new Point(309, 172);
+            listDetalhesBalcão.Name = "listDetalhesBalcão";
+            listDetalhesBalcão.Size = new Size(250, 164);
+            listDetalhesBalcão.TabIndex = 40;
+            // 
+            // btnIrBalcão
+            // 
+            btnIrBalcão.BackColor = Color.FromArgb(230, 255, 0);
+            btnIrBalcão.Cursor = Cursors.Hand;
+            btnIrBalcão.FlatStyle = FlatStyle.Flat;
+            btnIrBalcão.Location = new Point(737, 404);
+            btnIrBalcão.Name = "btnIrBalcão";
+            btnIrBalcão.Size = new Size(31, 34);
+            btnIrBalcão.TabIndex = 45;
+            btnIrBalcão.Text = ">";
+            btnIrBalcão.UseVisualStyleBackColor = false;
+            btnIrBalcão.Click += btnIrBalcão_Click;
+            // 
             // Balcão
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(241, 241, 241);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnIrBalcão);
             Controls.Add(lblBalcão);
             Controls.Add(btnFecharPedido);
             Controls.Add(listDetalhesBalcão);
@@ -198,11 +213,12 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox1;
         private Button btnHistórico;
-        private ListBox listBalcão;
-        private ListBox listDetalhesBalcão;
-        private ListBox listHistórico;
-        private ListBox listDetalhesHistórico;
         private Button btnFecharPedido;
         private Label lblBalcão;
+        private ListBox listDetalhesHistórico;
+        private ListBox listHistórico;
+        private ListBox listBalcão;
+        private ListBox listDetalhesBalcão;
+        private Button btnIrBalcão;
     }
 }

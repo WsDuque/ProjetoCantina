@@ -22,7 +22,10 @@ namespace Cantina
             Pronto,
             Entregue
         }
-
+        public string PedidoStatus
+        {
+            get {  return $"{código} - {cliente} - {status}"; }
+        }
         public override string ToString()
         {
             return $"{código} - {cliente}";

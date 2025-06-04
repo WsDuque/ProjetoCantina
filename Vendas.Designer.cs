@@ -208,7 +208,6 @@
             lblTroco.TabIndex = 16;
             lblTroco.Text = "Troco:";
             lblTroco.Visible = false;
-            lblTroco.Click += lblTroco_Click;
             // 
             // rbtnDinheiro
             // 
