@@ -320,5 +320,12 @@ namespace Cantina
         {
 
         }
+
+        private void btnIrCozinha_Click(object sender, EventArgs e)
+        {
+            Cozinha cozinha = new Cozinha();
+            Hide();
+            cozinha.Show();
+        }
     }
 }

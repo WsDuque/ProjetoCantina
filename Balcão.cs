@@ -19,10 +19,10 @@ namespace Cantina
         }
         private void Balcão_Load(object sender, EventArgs e)
         {
-            
+
             foreach (var pedido in PedidosGerais.Pedidos)
             {
-               
+
                 if (Pedido.Status.Pronto == pedido.status)
                 {
                     listBalcão.Items.Add(pedido);
@@ -73,10 +73,25 @@ namespace Cantina
 
         private void btnFecharPedido_Click(object sender, EventArgs e)
         {
-            if(listBalcão.SelectedItem != null)
+            if (listBalcão.SelectedItem != null)
             {
                 listBalcão.Items.Remove(listBalcão.SelectedItem);
             }
+        }
+
+        private void listHistórico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listHistórico.SelectedItem != null)
+            {
+                listDetalhesHistórico.Items.Clear();
+                listDetalhesHistórico.Visible = true;
+                Pedido pedido = new();
+                pedido = listHistórico.SelectedItem as Pedido;
+                foreach (Produto produto in pedido.Produtos)
+                    listDetalhesHistórico.Items.Add($"- {produto}");
+            }
+            else
+                listDetalhesHistórico.Visible=false;
         }
     }
 }

@@ -51,11 +51,11 @@
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             pictureBox6 = new PictureBox();
-            numericUpDown1 = new NumericUpDown();
             txtQuantidade = new TextBox();
+            lblVendas = new Label();
+            btnIrCozinha = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // btnAdicionar
@@ -66,7 +66,7 @@
             btnAdicionar.FlatStyle = FlatStyle.Flat;
             btnAdicionar.Font = new Font("Agrandir", 12F, FontStyle.Bold);
             btnAdicionar.ForeColor = Color.Black;
-            btnAdicionar.Location = new Point(401, 144);
+            btnAdicionar.Location = new Point(289, 156);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(98, 36);
             btnAdicionar.TabIndex = 0;
@@ -80,7 +80,7 @@
             btnRemover.Cursor = Cursors.Hand;
             btnRemover.FlatStyle = FlatStyle.Flat;
             btnRemover.Font = new Font("Agrandir", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRemover.Location = new Point(511, 144);
+            btnRemover.Location = new Point(405, 156);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(98, 36);
             btnRemover.TabIndex = 1;
@@ -92,12 +92,12 @@
             // 
             listCardápio.BackColor = Color.FromArgb(202, 196, 183);
             listCardápio.BorderStyle = BorderStyle.FixedSingle;
-            listCardápio.Font = new Font("Segoe UI", 10F);
+            listCardápio.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listCardápio.FormattingEnabled = true;
-            listCardápio.ItemHeight = 17;
-            listCardápio.Location = new Point(21, 161);
+            listCardápio.ItemHeight = 18;
+            listCardápio.Location = new Point(22, 198);
             listCardápio.Name = "listCardápio";
-            listCardápio.Size = new Size(250, 172);
+            listCardápio.Size = new Size(250, 164);
             listCardápio.TabIndex = 2;
             listCardápio.SelectedIndexChanged += listCardápio_SelectedIndexChanged;
             listCardápio.KeyDown += listCardápio_KeyDown;
@@ -106,11 +106,12 @@
             // 
             listPedido.BackColor = Color.FromArgb(202, 196, 183);
             listPedido.BorderStyle = BorderStyle.FixedSingle;
+            listPedido.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listPedido.FormattingEnabled = true;
-            listPedido.ItemHeight = 15;
-            listPedido.Location = new Point(292, 198);
+            listPedido.ItemHeight = 17;
+            listPedido.Location = new Point(289, 216);
             listPedido.Name = "listPedido";
-            listPedido.Size = new Size(176, 137);
+            listPedido.Size = new Size(176, 121);
             listPedido.TabIndex = 3;
             listPedido.SelectedIndexChanged += listPedido_SelectedIndexChanged;
             // 
@@ -121,7 +122,7 @@
             btnFinalizar.Cursor = Cursors.Hand;
             btnFinalizar.FlatStyle = FlatStyle.Flat;
             btnFinalizar.Font = new Font("Agrandir", 12F, FontStyle.Bold);
-            btnFinalizar.Location = new Point(604, 381);
+            btnFinalizar.Location = new Point(586, 398);
             btnFinalizar.Name = "btnFinalizar";
             btnFinalizar.Size = new Size(116, 45);
             btnFinalizar.TabIndex = 4;
@@ -148,7 +149,7 @@
             lblQuantidade.BorderStyle = BorderStyle.FixedSingle;
             lblQuantidade.Font = new Font("Agrandir", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblQuantidade.ForeColor = Color.Black;
-            lblQuantidade.Location = new Point(289, 128);
+            lblQuantidade.Location = new Point(56, 164);
             lblQuantidade.Name = "lblQuantidade";
             lblQuantidade.Size = new Size(103, 23);
             lblQuantidade.TabIndex = 8;
@@ -158,7 +159,7 @@
             // 
             txtCliente.BackColor = Color.FromArgb(202, 196, 183);
             txtCliente.Cursor = Cursors.IBeam;
-            txtCliente.Location = new Point(510, 222);
+            txtCliente.Location = new Point(508, 231);
             txtCliente.Name = "txtCliente";
             txtCliente.Size = new Size(92, 23);
             txtCliente.TabIndex = 10;
@@ -168,7 +169,7 @@
             lblCliente.AutoSize = true;
             lblCliente.BackColor = Color.FromArgb(202, 196, 183);
             lblCliente.Font = new Font("Agrandir", 12F, FontStyle.Bold);
-            lblCliente.Location = new Point(511, 198);
+            lblCliente.Location = new Point(509, 207);
             lblCliente.Name = "lblCliente";
             lblCliente.Size = new Size(68, 21);
             lblCliente.TabIndex = 11;
@@ -177,7 +178,7 @@
             // txtDinheiro
             // 
             txtDinheiro.BackColor = Color.FromArgb(202, 196, 183);
-            txtDinheiro.Location = new Point(635, 281);
+            txtDinheiro.Location = new Point(633, 290);
             txtDinheiro.Name = "txtDinheiro";
             txtDinheiro.Size = new Size(92, 23);
             txtDinheiro.TabIndex = 14;
@@ -189,7 +190,7 @@
             lblDinheiro.AutoSize = true;
             lblDinheiro.BackColor = Color.FromArgb(202, 196, 183);
             lblDinheiro.Font = new Font("Agrandir", 12F, FontStyle.Bold);
-            lblDinheiro.Location = new Point(635, 258);
+            lblDinheiro.Location = new Point(633, 264);
             lblDinheiro.Name = "lblDinheiro";
             lblDinheiro.Size = new Size(78, 21);
             lblDinheiro.TabIndex = 15;
@@ -201,7 +202,7 @@
             lblTroco.AutoSize = true;
             lblTroco.BackColor = Color.FromArgb(202, 196, 183);
             lblTroco.Font = new Font("Agrandir", 12F, FontStyle.Bold);
-            lblTroco.Location = new Point(635, 317);
+            lblTroco.Location = new Point(654, 317);
             lblTroco.Name = "lblTroco";
             lblTroco.Size = new Size(57, 21);
             lblTroco.TabIndex = 16;
@@ -214,7 +215,7 @@
             rbtnDinheiro.AutoSize = true;
             rbtnDinheiro.BackColor = Color.FromArgb(202, 196, 183);
             rbtnDinheiro.Font = new Font("Agrandir", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rbtnDinheiro.Location = new Point(511, 255);
+            rbtnDinheiro.Location = new Point(509, 264);
             rbtnDinheiro.Name = "rbtnDinheiro";
             rbtnDinheiro.Size = new Size(86, 24);
             rbtnDinheiro.TabIndex = 17;
@@ -228,7 +229,7 @@
             rbtnDébito.AutoSize = true;
             rbtnDébito.BackColor = Color.FromArgb(202, 196, 183);
             rbtnDébito.Font = new Font("Agrandir", 11F, FontStyle.Bold);
-            rbtnDébito.Location = new Point(511, 280);
+            rbtnDébito.Location = new Point(509, 289);
             rbtnDébito.Name = "rbtnDébito";
             rbtnDébito.Size = new Size(75, 24);
             rbtnDébito.TabIndex = 20;
@@ -242,7 +243,7 @@
             rbtnCrédito.AutoSize = true;
             rbtnCrédito.BackColor = Color.FromArgb(202, 196, 183);
             rbtnCrédito.Font = new Font("Agrandir", 11F, FontStyle.Bold);
-            rbtnCrédito.Location = new Point(511, 305);
+            rbtnCrédito.Location = new Point(509, 314);
             rbtnCrédito.Name = "rbtnCrédito";
             rbtnCrédito.Size = new Size(82, 24);
             rbtnCrédito.TabIndex = 21;
@@ -256,7 +257,7 @@
             rbtnPix.AutoSize = true;
             rbtnPix.BackColor = Color.FromArgb(202, 196, 183);
             rbtnPix.Font = new Font("Agrandir", 11F, FontStyle.Bold);
-            rbtnPix.Location = new Point(511, 330);
+            rbtnPix.Location = new Point(509, 339);
             rbtnPix.Name = "rbtnPix";
             rbtnPix.Size = new Size(49, 24);
             rbtnPix.TabIndex = 22;
@@ -271,7 +272,7 @@
             checkViagem.BackColor = Color.FromArgb(202, 196, 183);
             checkViagem.Cursor = Cursors.Hand;
             checkViagem.Font = new Font("Agrandir", 12F, FontStyle.Bold);
-            checkViagem.Location = new Point(635, 207);
+            checkViagem.Location = new Point(633, 203);
             checkViagem.Name = "checkViagem";
             checkViagem.Size = new Size(85, 25);
             checkViagem.TabIndex = 23;
@@ -282,9 +283,8 @@
             // 
             btnIrBalcão.BackColor = Color.FromArgb(230, 255, 0);
             btnIrBalcão.Cursor = Cursors.Hand;
-            btnIrBalcão.FlatAppearance.BorderSize = 0;
             btnIrBalcão.FlatStyle = FlatStyle.Flat;
-            btnIrBalcão.Location = new Point(757, 404);
+            btnIrBalcão.Location = new Point(737, 404);
             btnIrBalcão.Name = "btnIrBalcão";
             btnIrBalcão.Size = new Size(31, 34);
             btnIrBalcão.TabIndex = 29;
@@ -306,20 +306,22 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(43, 12);
+            dateTimePicker1.Location = new Point(89, 432);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(84, 23);
             dateTimePicker1.TabIndex = 32;
             dateTimePicker1.Value = new DateTime(2025, 5, 28, 11, 4, 56, 0);
+            dateTimePicker1.Visible = false;
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Format = DateTimePickerFormat.Time;
-            dateTimePicker2.Location = new Point(41, 41);
+            dateTimePicker2.Location = new Point(-3, 432);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(86, 23);
             dateTimePicker2.TabIndex = 33;
             dateTimePicker2.Value = new DateTime(2025, 5, 28, 11, 4, 56, 0);
+            dateTimePicker2.Visible = false;
             // 
             // pictureBox6
             // 
@@ -331,21 +333,37 @@
             pictureBox6.TabIndex = 34;
             pictureBox6.TabStop = false;
             // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(310, 92);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(61, 23);
-            numericUpDown1.TabIndex = 36;
-            // 
             // txtQuantidade
             // 
             txtQuantidade.BackColor = Color.FromArgb(202, 196, 183);
-            txtQuantidade.Location = new Point(292, 152);
+            txtQuantidade.Location = new Point(165, 164);
             txtQuantidade.Name = "txtQuantidade";
             txtQuantidade.Size = new Size(98, 23);
             txtQuantidade.TabIndex = 7;
             txtQuantidade.KeyDown += txtQuantidade_KeyDown;
+            // 
+            // lblVendas
+            // 
+            lblVendas.AutoSize = true;
+            lblVendas.Font = new Font("Agrandir", 30F, FontStyle.Bold);
+            lblVendas.Location = new Point(164, 58);
+            lblVendas.Name = "lblVendas";
+            lblVendas.Size = new Size(159, 54);
+            lblVendas.TabIndex = 37;
+            lblVendas.Text = "Vendas";
+            // 
+            // btnIrCozinha
+            // 
+            btnIrCozinha.BackColor = Color.FromArgb(230, 255, 0);
+            btnIrCozinha.Cursor = Cursors.Hand;
+            btnIrCozinha.FlatStyle = FlatStyle.Flat;
+            btnIrCozinha.Location = new Point(737, 364);
+            btnIrCozinha.Name = "btnIrCozinha";
+            btnIrCozinha.Size = new Size(31, 34);
+            btnIrCozinha.TabIndex = 38;
+            btnIrCozinha.Text = ">";
+            btnIrCozinha.UseVisualStyleBackColor = false;
+            btnIrCozinha.Click += btnIrCozinha_Click;
             // 
             // Vendas
             // 
@@ -353,7 +371,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(241, 241, 241);
             ClientSize = new Size(800, 450);
-            Controls.Add(numericUpDown1);
+            Controls.Add(btnIrCozinha);
+            Controls.Add(lblVendas);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
             Controls.Add(pictureBox1);
@@ -382,7 +401,6 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -411,7 +429,8 @@
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
         private PictureBox pictureBox6;
-        private NumericUpDown numericUpDown1;
         private TextBox txtQuantidade;
+        private Label lblVendas;
+        private Button btnIrCozinha;
     }
 }
