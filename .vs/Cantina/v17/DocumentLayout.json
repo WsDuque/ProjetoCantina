@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\25163080\\Documents\\C#\\ProjetoCantina\\Cantina\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B61488B-F8F1-415C-BEA1-FD5826741839}|Cantina.csproj|C:\\Users\\25163080\\Documents\\C#\\ProjetoCantina\\Cantina\\balc\u00E3o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1B61488B-F8F1-415C-BEA1-FD5826741839}|Cantina.csproj|c:\\users\\25163080\\documents\\c#\\projetocantina\\cantina\\balc\u00E3o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1B61488B-F8F1-415C-BEA1-FD5826741839}|Cantina.csproj|solutionrelative:balc\u00E3o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{1B61488B-F8F1-415C-BEA1-FD5826741839}|Cantina.csproj|solutionrelative:cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B61488B-F8F1-415C-BEA1-FD5826741839}|Cantina.csproj|c:\\users\\25163080\\documents\\c#\\projetocantina\\cantina\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1B61488B-F8F1-415C-BEA1-FD5826741839}|Cantina.csproj|C:\\Users\\25163080\\Documents\\C#\\ProjetoCantina\\Cantina\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1B61488B-F8F1-415C-BEA1-FD5826741839}|Cantina.csproj|solutionrelative:cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -146,8 +146,7 @@
               "ToolTip": "C:\\Users\\25163080\\Documents\\C#\\ProjetoCantina\\Cantina\\Cozinha.cs [Projeto]",
               "RelativeToolTip": "Cozinha.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T11:51:34.768Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-06-04T11:51:34.768Z"
             },
             {
               "$type": "Document",
@@ -170,8 +169,7 @@
               "ToolTip": "C:\\Users\\25163080\\Documents\\C#\\ProjetoCantina\\Cantina\\Vendas.cs [Projeto]",
               "RelativeToolTip": "Vendas.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T23:14:35.66Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-05-27T23:14:35.66Z"
             }
           ]
         }
