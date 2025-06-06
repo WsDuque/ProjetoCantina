@@ -33,6 +33,10 @@
             pictureBox1 = new PictureBox();
             btnIrVendas = new Button();
             pictureBox6 = new PictureBox();
+            lblPreparando = new Label();
+            label1 = new Label();
+            listPreparando = new ListBox();
+            listPronto = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
@@ -78,12 +82,61 @@
             pictureBox6.TabIndex = 38;
             pictureBox6.TabStop = false;
             // 
+            // lblPreparando
+            // 
+            lblPreparando.AutoSize = true;
+            lblPreparando.Font = new Font("Agrandir", 15F, FontStyle.Bold);
+            lblPreparando.Location = new Point(120, 161);
+            lblPreparando.Name = "lblPreparando";
+            lblPreparando.Size = new Size(125, 27);
+            lblPreparando.TabIndex = 43;
+            lblPreparando.Text = "Preparando";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Agrandir", 15F, FontStyle.Bold);
+            label1.Location = new Point(484, 161);
+            label1.Name = "label1";
+            label1.Size = new Size(79, 27);
+            label1.TabIndex = 44;
+            label1.Text = "Pronto";
+            // 
+            // listPreparando
+            // 
+            listPreparando.BackColor = Color.FromArgb(202, 196, 183);
+            listPreparando.BorderStyle = BorderStyle.FixedSingle;
+            listPreparando.Font = new Font("Inter", 9.75F);
+            listPreparando.FormattingEnabled = true;
+            listPreparando.ItemHeight = 18;
+            listPreparando.Location = new Point(102, 191);
+            listPreparando.Name = "listPreparando";
+            listPreparando.Size = new Size(175, 218);
+            listPreparando.TabIndex = 45;
+            listPreparando.SelectedIndexChanged += listPreparando_SelectedIndexChanged;
+            // 
+            // listPronto
+            // 
+            listPronto.BackColor = Color.FromArgb(202, 196, 183);
+            listPronto.BorderStyle = BorderStyle.FixedSingle;
+            listPronto.Font = new Font("Inter", 9.75F);
+            listPronto.FormattingEnabled = true;
+            listPronto.ItemHeight = 18;
+            listPronto.Location = new Point(441, 191);
+            listPronto.Name = "listPronto";
+            listPronto.Size = new Size(175, 218);
+            listPronto.TabIndex = 46;
+            // 
             // Chamada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(241, 241, 241);
             ClientSize = new Size(800, 450);
+            Controls.Add(listPronto);
+            Controls.Add(listPreparando);
+            Controls.Add(label1);
+            Controls.Add(lblPreparando);
             Controls.Add(lblChamada);
             Controls.Add(pictureBox1);
             Controls.Add(btnIrVendas);
@@ -103,5 +156,9 @@
         private PictureBox pictureBox1;
         private Button btnIrVendas;
         private PictureBox pictureBox6;
+        private Label lblPreparando;
+        private Label label1;
+        private ListBox listPreparando;
+        private ListBox listPronto;
     }
 }

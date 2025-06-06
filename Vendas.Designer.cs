@@ -310,7 +310,6 @@
             dateTimePicker1.Size = new Size(84, 23);
             dateTimePicker1.TabIndex = 32;
             dateTimePicker1.Value = new DateTime(2025, 5, 28, 11, 4, 56, 0);
-            dateTimePicker1.Visible = false;
             // 
             // dateTimePicker2
             // 
@@ -320,7 +319,6 @@
             dateTimePicker2.Size = new Size(86, 23);
             dateTimePicker2.TabIndex = 33;
             dateTimePicker2.Value = new DateTime(2025, 5, 28, 11, 4, 56, 0);
-            dateTimePicker2.Visible = false;
             // 
             // pictureBox6
             // 

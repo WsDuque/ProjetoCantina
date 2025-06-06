@@ -13,20 +13,11 @@ namespace Cantina
             lblTotal.Text = $"Total: R$0";
             listPedido.DisplayMember = "pedido";
             listCardápio.DisplayMember = "cardápio";
-            List<Produto> lista = new List<Produto>();
-            lista.Add(new Produto("Pão de Queijo", 3.50));
-            lista.Add(new Produto("Coxinha", 5));
-            lista.Add(new Produto("Pastel de Carne", 6, true));
-            lista.Add(new Produto("Pastel de Queijo", 5.50, true));
-            lista.Add(new Produto("Suco Natural (300mL)", 4));
-            lista.Add(new Produto("Refrigerante Lata", 4.50));
-            lista.Add(new Produto("Hambúrguer Simples", 8, true));
-            lista.Add(new Produto("Hambúrguer com Queijo", 9, true));
-            lista.Add(new Produto("X-Tudo", 12, true));
-            lista.Add(new Produto("Água Mineral (500mL)", 2.50));
+           
             txtQuantidade.Text = "1";
-            foreach (Produto produto in lista)
-                listCardápio.Items.Add(produto);
+            
+            //foreach (Produto produto in lista)
+            //    listCardápio.Items.Add(produto);
 
 
         }

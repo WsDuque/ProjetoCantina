@@ -24,7 +24,7 @@ namespace Cantina
         }
         public string PedidoStatus
         {
-            get {  return $"{código} - {cliente} - {status}"; }
+            get {  return $"{código} - {cliente} - {status} - {dataHora}"; }
         }
         public override string ToString()
         {

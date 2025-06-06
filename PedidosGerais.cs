@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Cantina
@@ -10,8 +11,9 @@ namespace Cantina
     {
         private static List<Pedido> pedidos = new List<Pedido>();
         private static int numeroPedido = 0;
-       
-      
+        public static string fileName = "CatinaPedidos.json";
+        public static string jsonString = JsonSerializer.Serialize((List<Pedido>)pedidos);
+
         public static List<Pedido> Pedidos
             {
                 get { return pedidos;}
