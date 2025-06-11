@@ -13,13 +13,7 @@ namespace Cantina
             lblTotal.Text = $"Total: R$0";
             listPedido.DisplayMember = "pedido";
             listCardápio.DisplayMember = "cardápio";
-           
             txtQuantidade.Text = "1";
-            
-            //foreach (Produto produto in lista)
-            //    listCardápio.Items.Add(produto);
-
-
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)

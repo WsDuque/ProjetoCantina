@@ -49,13 +49,9 @@ namespace Cantina
             get { return this.quantidade; }
             set { this.quantidade = value; }
         }
-        public string pedido
-        {
-            get { return $"{nome} - R${valor:n2} x{quantidade}"; }
-        }
         public string cardápio
         {
-            get { return $"{nome} - R${valor:n2}"; }
+            get { return $"{nome} - R${valor:n2} - Chapa {this.isChapa}"; }
         }
 
         public override string ToString()

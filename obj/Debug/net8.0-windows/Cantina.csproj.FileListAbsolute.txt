@@ -72,3 +72,4 @@ C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\r
 C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\Cantina.Cozinha.resources
 C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\Cantina.Chamada.resources
 C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\Cantina.Estoque.resources
+C:\Users\25163080\Documents\C#\ProjetoCantina\Cantina\obj\Debug\net8.0-windows\Cantina.Cardápio.resources
